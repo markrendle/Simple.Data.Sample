@@ -2,45 +2,49 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SimpleDataSample.GettingStarted;
 using SimpleDataSample.Samples;
 
 namespace SimpleDataSample
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            CallingStoredProcedureExamples.MultipleResultSetExample();
-            CallingStoredProcedureExamples.ReturnValueExample();
-            CallingStoredProcedureExamples.SimpleCallExample();
+      OpenDatabase.UseStandardOpenMethods();
+      OpenDatabase.UseSharedConnection();
 
-            FindByExamples.AllExample();
-            FindByExamples.BasicFindBy();
-            FindByExamples.FindAcrossMultipleTablesWithForeignKeys();
-            FindByExamples.FindAllByReturnsMultipleRows();
-            FindByExamples.FindWithLikeOperator();
-            FindByExamples.FindWithMultipleOperators();
-            FindByExamples.FindWithOperators();
-            FindByExamples.TwoColumnFindBy();
+     // CallingStoredProcedureExamples.MultipleResultSetExample();
+      CallingStoredProcedureExamples.ReturnValueExample();
+      CallingStoredProcedureExamples.SimpleCallExample();
 
-            InferredHierarchyExample.PrintCustomerOrders(1);
+      FindByExamples.AllExample();
+      FindByExamples.BasicFindBy();
+      FindByExamples.FindAcrossMultipleTablesWithForeignKeys();
+      FindByExamples.FindAllByReturnsMultipleRows();
+      FindByExamples.FindWithLikeOperator();
+      FindByExamples.FindWithMultipleOperators();
+      FindByExamples.FindWithOperators();
+      FindByExamples.TwoColumnFindBy();
 
-            MagicCastingExamples.ImplicitCastExample();
+      InferredHierarchyExample.PrintCustomerOrders(1);
 
-            InsertExamples.InsertUsingExpandoObject();
-            InsertExamples.InsertUsingNamedParameters();
-            InsertExamples.InsertUsingStaticTypedObject();
+      MagicCastingExamples.ImplicitCastExample();
 
-            UpdateExamples.UpdateUsingDynamicObjectWithExplicitCriteria();
-            UpdateExamples.UpdateUsingDynamicObjectWithImplicitKey();
-            UpdateExamples.UpdateUsingNamedParameters();
+      InsertExamples.InsertUsingExpandoObject();
+      InsertExamples.InsertUsingNamedParameters();
+      InsertExamples.InsertUsingStaticTypedObject();
 
-            LinqFakeExamples.FakeLinqOperatorsCastExample();
-            LinqFakeExamples.FakeLinqOperatorsExample();
-            LinqFakeExamples.FakeLinqOperatorsWithTypesExample();
+      UpdateExamples.UpdateUsingDynamicObjectWithExplicitCriteria();
+      UpdateExamples.UpdateUsingDynamicObjectWithImplicitKey();
+      UpdateExamples.UpdateUsingNamedParameters();
 
-            Console.WriteLine("Fin");
-            Console.ReadLine();
-        }
+      LinqFakeExamples.FakeLinqOperatorsCastExample();
+      LinqFakeExamples.FakeLinqOperatorsExample();
+      LinqFakeExamples.FakeLinqOperatorsWithTypesExample();
+
+      Console.WriteLine("Fin");
+      Console.ReadLine();
     }
+  }
 }
