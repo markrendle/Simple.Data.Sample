@@ -2,17 +2,26 @@
 using Simple.Data;
 using System.Data.SqlClient;
 
-namespace SimpleDataSample.GettingStarted
+namespace SimpleDataSample
 {
-  class OpenDatabase
+  class OpenDatabaseSamples
   {
-    public static readonly string MagicConnection =
+    public readonly string MagicConnection =
       @"Data Source=.\SQL2K8;Initial Catalog=MvcMusicStore;Integrated Security=True";
 
-    public static void UseStandardOpenMethods()
+    public void RunAll()
     {
       Console.WriteLine("Use Standard Open Methods");
+      UseStandardOpenMethods();
+      Console.WriteLine("Press a Key");
+      Console.ReadLine();
 
+      Console.WriteLine("Use Shared Connection");
+      UseSharedConnection();
+    }
+
+    private void UseStandardOpenMethods()
+    {
       // Uses the default-named connection string in App.Config
       var defaultDb = Database.Open();
       var artist = defaultDb.Artists.FindByName("Aerosmith");
@@ -24,25 +33,24 @@ namespace SimpleDataSample.GettingStarted
       Console.WriteLine("Id: {0}, Name: {1}", artist2.ArtistId, artist2.Name);
 
       // Uses a magic connection string set in code
-      var magicDb = Database.OpenConnection(OpenDatabase.MagicConnection);
+      var magicDb = Database.OpenConnection(MagicConnection);
       var artist3 = magicDb.Artists.FindByName("Iron Maiden");
       Console.WriteLine("Id: {0}, Name: {1}", artist3.ArtistId, artist3.Name);
-      Console.ReadLine();
+
     }
 
-    private static SqlConnection GetOpenConnection()
+    private SqlConnection GetOpenConnection()
     {
-      var connection = new SqlConnection(OpenDatabase.MagicConnection);
+      var connection = new SqlConnection(MagicConnection);
       connection.Open();
       return connection;
     }
 
-    public static void UseSharedConnection()
+    private void UseSharedConnection()
     {
-      Console.WriteLine("Use Shared Connection");
 
-      var db = Database.OpenConnection(OpenDatabase.MagicConnection);
-      SqlConnection conn = OpenDatabase.GetOpenConnection();
+      var db = Database.OpenConnection(MagicConnection);
+      SqlConnection conn = GetOpenConnection();
       db.UseSharedConnection(conn);
 
       var artist = db.Artists.FindByName("Aerosmith");
@@ -56,7 +64,6 @@ namespace SimpleDataSample.GettingStarted
 
       db.StopUsingSharedConnection();
       conn.Close();
-      Console.ReadLine();
     }
   }
 }
