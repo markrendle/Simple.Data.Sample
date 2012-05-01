@@ -1,46 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using SimpleDataSample.Samples;
 
 namespace SimpleDataSample
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+      do
+      {
+        ShowOptions();
+        switch (Console.ReadLine())
         {
-            CallingStoredProcedureExamples.MultipleResultSetExample();
-            CallingStoredProcedureExamples.ReturnValueExample();
-            CallingStoredProcedureExamples.SimpleCallExample();
-
-            FindByExamples.AllExample();
-            FindByExamples.BasicFindBy();
-            FindByExamples.FindAcrossMultipleTablesWithForeignKeys();
-            FindByExamples.FindAllByReturnsMultipleRows();
-            FindByExamples.FindWithLikeOperator();
-            FindByExamples.FindWithMultipleOperators();
-            FindByExamples.FindWithOperators();
-            FindByExamples.TwoColumnFindBy();
-
-            InferredHierarchyExample.PrintCustomerOrders(1);
-
-            MagicCastingExamples.ImplicitCastExample();
-
-            InsertExamples.InsertUsingExpandoObject();
-            InsertExamples.InsertUsingNamedParameters();
-            InsertExamples.InsertUsingStaticTypedObject();
-
-            UpdateExamples.UpdateUsingDynamicObjectWithExplicitCriteria();
-            UpdateExamples.UpdateUsingDynamicObjectWithImplicitKey();
-            UpdateExamples.UpdateUsingNamedParameters();
-
-            LinqFakeExamples.FakeLinqOperatorsCastExample();
-            LinqFakeExamples.FakeLinqOperatorsExample();
-            LinqFakeExamples.FakeLinqOperatorsWithTypesExample();
-
+          case "1":
+            var OpenDbDemo = new OpenDatabaseSamples();
+            OpenDbDemo.RunAll();
+            break;
+          case "2":
+            var AllMethodDemo = new AllMethodSamples();
+            AllMethodSamples.RunAll();
+            break;
+          case "3":
+            var FindByMethodDemo = new FindByMethodSamples();
+            FindByMethodSamples.RunAll();
+            break;
+          case "x":
+          case "X":
             Console.WriteLine("Fin");
-            Console.ReadLine();
+            return;
+          default:
+            Console.WriteLine("Not a valid option. Choose again");
+            break;
         }
+      } while (true);
     }
+
+    private static void ShowOptions()
+    {
+      Console.WriteLine();
+      Console.WriteLine("--------");
+      Console.WriteLine();
+      Console.WriteLine("Simple.Data Samples");
+      Console.WriteLine("Choose from the following options");
+      Console.WriteLine();
+      Console.WriteLine("1. Open Database Demos");
+      Console.WriteLine("2. Basic Selection with All()");
+      Console.WriteLine("3. Basic Selection with FindBy()");
+      Console.WriteLine("X. Quit");
+      Console.WriteLine();
+
+    }
+  }
 }
