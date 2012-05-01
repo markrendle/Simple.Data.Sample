@@ -34,14 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Simple.Data">
-      <HintPath>..\packages\Simple.Data.Core.0.16.0.0\lib\net40\Simple.Data.dll</HintPath>
+    <Reference Include="Simple.Data, Version=0.16.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Simple.Data.Core.0.16.1.0\lib\net40\Simple.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Simple.Data.Ado">
-      <HintPath>..\packages\Simple.Data.Ado.0.16.0.0\lib\net40\Simple.Data.Ado.dll</HintPath>
+    <Reference Include="Simple.Data.Ado, Version=0.16.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Simple.Data.Ado.0.16.1.0\lib\net40\Simple.Data.Ado.dll</HintPath>
     </Reference>
-    <Reference Include="Simple.Data.SqlServer">
-      <HintPath>..\packages\Simple.Data.SqlServer.0.16.0.0\lib\net40\Simple.Data.SqlServer.dll</HintPath>
+    <Reference Include="Simple.Data.SqlServer, Version=0.16.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Simple.Data.SqlServer.0.16.1.0\lib\net40\Simple.Data.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,18 +55,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GettingStarted\OpenDatabase.cs" />
+    <Compile Include="2_Basics\AllMethodSamples.cs" />
+    <Compile Include="2_Basics\FindAllByMethodSamples.cs" />
+    <Compile Include="ExampleRunner.cs" />
+    <Compile Include="1_GettingStarted\OpenDatabaseSamples.cs" />
+    <Compile Include="2_Basics\FindByMethodSamples.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Samples\CallingStoredProcedureExamples.cs" />
-    <Compile Include="Samples\DeleteExamples.cs" />
-    <Compile Include="Samples\Customer.cs" />
-    <Compile Include="Samples\FindByExamples.cs" />
-    <Compile Include="Samples\InferredHierarchyExample.cs" />
-    <Compile Include="Samples\InsertExamples.cs" />
-    <Compile Include="Samples\LinqFakeExamples.cs" />
-    <Compile Include="Samples\MagicCastingExamples.cs" />
-    <Compile Include="Samples\UpdateExamples.cs" />
+    <Compile Include="zzOldSamples\CallingStoredProcedureExamples.cs" />
+    <Compile Include="zzOldSamples\DeleteExamples.cs" />
+    <Compile Include="zzOldSamples\Customer.cs" />
+    <Compile Include="zzOldSamples\FindByExamples.cs" />
+    <Compile Include="zzOldSamples\InferredHierarchyExample.cs" />
+    <Compile Include="zzOldSamples\InsertExamples.cs" />
+    <Compile Include="zzOldSamples\LinqFakeExamples.cs" />
+    <Compile Include="zzOldSamples\MagicCastingExamples.cs" />
+    <Compile Include="zzOldSamples\UpdateExamples.cs" />
+    <Compile Include="ExampleTestListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -72,8 +80,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DatabaseCreation.sql" />
-    <Content Include="MvcMusicStore-Create.sql" />
+    <Content Include="SqlScripts\DatabaseCreation.sql" />
+    <Content Include="SqlScripts\MvcMusicStore-Create.sql" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
