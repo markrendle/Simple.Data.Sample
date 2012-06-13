@@ -17,11 +17,32 @@ namespace SimpleDataSample
             break;
           case "2":
             var AllMethodDemo = new AllMethodSamples();
-            AllMethodSamples.RunAll();
+            AllMethodDemo.RunAll();
             break;
           case "3":
             var FindByMethodDemo = new FindByMethodSamples();
-            FindByMethodSamples.RunAll();
+            FindByMethodDemo.RunAll();
+            break;
+          case "4":
+            var FindAllByMethodDemo = new FindAllByMethodSamples();
+            FindAllByMethodDemo.RunAll();
+            break;
+          case "5":
+            var GetMethodDemo = new GetMethodSamples();
+            GetMethodDemo.RunAll();
+            break;
+          case "6":
+            var FindMethodDemo = new FindMethodSamples();
+            FindMethodDemo.RunAll();
+            break;
+          case "7":
+            var FindAllMethodDemo = new FindAllMethodSamples();
+            FindAllMethodDemo.RunAll();
+            break;
+          case "a":
+          case "A":
+            var AwMethodDemo = new AwSamples();
+            AwMethodDemo.GetFromCompoundKeyTable();
             break;
           case "x":
           case "X":
@@ -45,6 +66,10 @@ namespace SimpleDataSample
       Console.WriteLine("1. Open Database Demos");
       Console.WriteLine("2. Basic Selection with All()");
       Console.WriteLine("3. Basic Selection with FindBy()");
+      Console.WriteLine("4. Basic Selection with FindAllBy()");
+      Console.WriteLine("5. Basic Selection with Get()");
+      Console.WriteLine("6. Basic Selection with Find()");
+      Console.WriteLine("7. Basic Selection with FindAll()");
       Console.WriteLine("X. Quit");
       Console.WriteLine();
 

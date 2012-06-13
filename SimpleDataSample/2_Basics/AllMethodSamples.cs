@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SimpleDataSample
+﻿namespace SimpleDataSample
 {
   class AllMethodSamples
   {
-    internal static void RunAll()
+    internal void RunAll()
     {
       ExampleRunner.QueryAlbums(
-            "Get all items in the Album table", 
+            "Get all items in the Album table",
             db => db.Albums.All());
 
       ExampleRunner.QueryAlbums(

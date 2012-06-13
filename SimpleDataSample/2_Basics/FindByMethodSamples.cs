@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace SimpleDataSample
+﻿namespace SimpleDataSample
 {
   class FindByMethodSamples
   {
-    internal static void RunAll()
+    internal void RunAll()
     {
       ExampleRunner.QueryAlbums(
         "Run FindBy with no arguments. Throws exception",
@@ -19,8 +17,12 @@ namespace SimpleDataSample
         db => db.Albums.FindBy(1));
 
       ExampleRunner.QueryAlbums(
-      "Albums.FindByGenreId(null). Throws exception",
+      "Albums.FindByGenreId(null).",
       db => db.Albums.FindByGenreId(null));
+
+      ExampleRunner.QueryAlbums(
+        "Albums.FindBy(GenreId:null).",
+      db => db.Albums.FindBy(GenreId: null));
 
       ExampleRunner.QueryAlbums(
           "Albums.FindByGenreId(1)", 

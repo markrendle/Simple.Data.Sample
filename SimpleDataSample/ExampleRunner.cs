@@ -57,6 +57,12 @@ namespace SimpleDataSample
 
     private static void ListReturnedAlbumTitles(dynamic albums)
     {
+      if (albums == null)
+      {
+        Console.WriteLine("Query returned null");
+        return;
+      }
+
       Console.WriteLine("Query returned a {0}", albums.GetType().FullName);
 
       if (albums is SimpleRecord)
