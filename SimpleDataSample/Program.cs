@@ -39,6 +39,10 @@ namespace SimpleDataSample
             var FindAllMethodDemo = new FindAllMethodSamples();
             FindAllMethodDemo.RunAll();
             break;
+          case "8":
+            var ColumnSelectionDemo = new ColumnSelectionSamples();
+            ColumnSelectionDemo.RunAll();
+            break;
           case "a":
           case "A":
             var AwMethodDemo = new AwSamples();
@@ -70,6 +74,7 @@ namespace SimpleDataSample
       Console.WriteLine("5. Basic Selection with Get()");
       Console.WriteLine("6. Basic Selection with Find()");
       Console.WriteLine("7. Basic Selection with FindAll()");
+      Console.WriteLine("8. Column Selection and Aliasing");
       Console.WriteLine("X. Quit");
       Console.WriteLine();
 

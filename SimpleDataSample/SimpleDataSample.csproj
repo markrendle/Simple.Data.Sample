@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="2_Basics\AllMethodSamples.cs" />
+    <Compile Include="2_Basics\ColumnSelectionSamples.cs" />
     <Compile Include="2_Basics\FindAllMethodSamples.cs" />
     <Compile Include="2_Basics\FindMethodSamples.cs" />
     <Compile Include="2_Basics\GetMethodSamples.cs" />
