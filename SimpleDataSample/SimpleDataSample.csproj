@@ -57,11 +57,12 @@
   <ItemGroup>
     <Compile Include="2_Basics\AllMethodSamples.cs" />
     <Compile Include="2_Basics\ColumnSelectionSamples.cs" />
+    <Compile Include="2_Basics\WhereConditionSamples.cs" />
+    <Compile Include="2_Basics\WhereMethodSamples.cs" />
     <Compile Include="2_Basics\FindAllMethodSamples.cs" />
     <Compile Include="2_Basics\FindMethodSamples.cs" />
     <Compile Include="2_Basics\GetMethodSamples.cs" />
     <Compile Include="2_Basics\FindAllByMethodSamples.cs" />
-    <Compile Include="AwSamples\AwSamples.cs" />
     <Compile Include="ExampleRunner.cs" />
     <Compile Include="1_GettingStarted\OpenDatabaseSamples.cs" />
     <Compile Include="2_Basics\FindByMethodSamples.cs" />

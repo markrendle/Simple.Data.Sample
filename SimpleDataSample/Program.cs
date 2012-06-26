@@ -43,10 +43,14 @@ namespace SimpleDataSample
             var ColumnSelectionDemo = new ColumnSelectionSamples();
             ColumnSelectionDemo.RunAll();
             break;
+          case "9":
+            var BasicWhereDemo = new WhereMethodSamples();
+            BasicWhereDemo.RunAll();
+            break;
           case "a":
           case "A":
-            var AwMethodDemo = new AwSamples();
-            AwMethodDemo.GetFromCompoundKeyTable();
+            var CommonSearchesDemo = new WhereConditionSamples();
+            CommonSearchesDemo.RunAll();
             break;
           case "x":
           case "X":
@@ -75,6 +79,8 @@ namespace SimpleDataSample
       Console.WriteLine("6. Basic Selection with Find()");
       Console.WriteLine("7. Basic Selection with FindAll()");
       Console.WriteLine("8. Column Selection and Aliasing");
+      Console.WriteLine("9. Basic use of Where()");
+      Console.WriteLine("A. Common Search Conditions");
       Console.WriteLine("X. Quit");
       Console.WriteLine();
 
