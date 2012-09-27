@@ -52,6 +52,11 @@ namespace SimpleDataSample
             var CommonSearchesDemo = new WhereConditionSamples();
             CommonSearchesDemo.RunAll();
             break;
+          case "b":
+          case "B":
+            var CountDistinctDemo = new CountDistinctSamples();
+            CountDistinctDemo.RunAll();
+            break;
           case "x":
           case "X":
             Console.WriteLine("Fin");
@@ -81,6 +86,7 @@ namespace SimpleDataSample
       Console.WriteLine("8. Column Selection and Aliasing");
       Console.WriteLine("9. Basic use of Where()");
       Console.WriteLine("A. Common Search Conditions");
+      Console.WriteLine("B. Count \\ Distinct Demos");
       Console.WriteLine("X. Quit");
       Console.WriteLine();
 

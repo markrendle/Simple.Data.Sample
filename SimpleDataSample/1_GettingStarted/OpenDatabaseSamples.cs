@@ -7,11 +7,7 @@ namespace SimpleDataSample
   class OpenDatabaseSamples
   {
     public readonly string MagicConnection =
-      @"Data Source=.\SQL2K8;Initial Catalog=MvcMusicStore;Integrated Security=True";
-
-    public readonly string AwConnection =
-  @"Data Source=.\SQL2K8;Initial Catalog=AdventureWorksLT2008R2;Integrated Security=True";
-
+      @"Data Source=.\SQLExpress;Initial Catalog=MvcMusicStore;Integrated Security=True";
 
     public void RunAll()
     {

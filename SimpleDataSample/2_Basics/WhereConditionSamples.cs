@@ -100,28 +100,28 @@ using System.Data.SqlTypes;
       //  "Using NOT BETWEEN. 2. In Where : db.Orders.All().Where(db.Orders.OrderDate != DateTime.MinValue.to(DateTime.Now))",
       //  db => db.Orders.All().Where(db.Orders.OrderDate != SqlDateTime.MinValue.Value.to(DateTime.Now)));
 
-      ExampleRunner.QueryAlbums(
+      ExampleRunner.RunQuery(
         "Using IS NULL. 1. Embedded : db.Albums.FindAllByGenreId(null);",
         db => db.Albums.FindAllByGenreId(null));
 
-      ExampleRunner.QueryAlbums(
+      ExampleRunner.RunQuery(
         "Using IS NULL. 2. Embedded : db.Albums.FindAllBy(GenreId:null);",
         db => db.Albums.FindAllBy(GenreId:null));
 
-      ExampleRunner.QueryAlbums(
+      ExampleRunner.RunQuery(
         "Using IS NULL. 3. In FindAll : db.Albums.FindAll(db.Albums.GenreId == null);",
         db => db.Albums.FindAll(db.Albums.GenreId == null));
 
-      ExampleRunner.QueryAlbums(
+      ExampleRunner.RunQuery(
         "Using IS NULL. 4. In Where : db.Albums.All().Where(db.Albums.GenreId == null);",
         db => db.Albums.All().Where(db.Albums.GenreId == null));
 
 
-      ExampleRunner.QueryAlbums(
+      ExampleRunner.RunQuery(
         "Using IS NOT NULL. 1. In FindAll : db.Albums.FindAll(db.Albums.GenreId != null);",
         db => db.Albums.FindAll(db.Albums.GenreId != null));
 
-      ExampleRunner.QueryAlbums(
+      ExampleRunner.RunQuery(
         "Using IS NOT NULL. 2. In Where : db.Albums.All().Where(db.Albums.GenreId != null);",
         db => db.Albums.All().Where(db.Albums.GenreId != null));
     }

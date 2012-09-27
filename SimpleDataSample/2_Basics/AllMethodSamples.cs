@@ -4,11 +4,11 @@
   {
     internal void RunAll()
     {
-      ExampleRunner.QueryAlbums(
+      ExampleRunner.RunQuery(
             "Get all items in the Album table",
             db => db.Albums.All());
 
-      ExampleRunner.QueryAlbums(
+      ExampleRunner.RunQuery(
             "Parameter added (GenreId=1) but is ignored",
             db => db.Albums.All(db.Albums.GenreId == "1"));
     }
