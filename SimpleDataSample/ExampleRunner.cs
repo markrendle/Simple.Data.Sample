@@ -80,6 +80,18 @@ namespace SimpleDataSample
 
       Console.WriteLine("Query returned a {0}", results.GetType().FullName);
 
+      if (results is int)
+      {
+        Console.WriteLine("An integer: " + results.ToString());
+        return;
+      }
+
+      if (results is string)
+      {
+        Console.WriteLine("A string: " + results);
+        return;
+      }
+
       if (results is SimpleRecord)
       {
         Console.WriteLine(GetPropertyValues(results, propertyNamesToList));

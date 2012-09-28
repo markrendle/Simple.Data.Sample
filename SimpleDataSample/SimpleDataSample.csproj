@@ -57,6 +57,8 @@
   <ItemGroup>
     <Compile Include="2_Basics\AllMethodSamples.cs" />
     <Compile Include="2_Basics\ColumnSelectionSamples.cs" />
+    <Compile Include="2_Basics\GetCountByMethodSamples.cs" />
+    <Compile Include="2_Basics\GetCountMethodSamples.cs" />
     <Compile Include="2_Basics\CountDistinctSamples.cs" />
     <Compile Include="2_Basics\WhereConditionSamples.cs" />
     <Compile Include="2_Basics\WhereMethodSamples.cs" />

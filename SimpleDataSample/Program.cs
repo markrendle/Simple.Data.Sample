@@ -57,6 +57,16 @@ namespace SimpleDataSample
             var CountDistinctDemo = new CountDistinctSamples();
             CountDistinctDemo.RunAll();
             break;
+          case "c":
+          case "C":
+            var GetCountDemo = new GetCountMethodSamples();
+            GetCountDemo.RunAll();
+            break;
+          case "d":
+          case "D":
+            var GetCountByDemo = new GetCountByMethodSamples();
+            GetCountByDemo.RunAll();
+            break;
           case "x":
           case "X":
             Console.WriteLine("Fin");
@@ -87,6 +97,8 @@ namespace SimpleDataSample
       Console.WriteLine("9. Basic use of Where()");
       Console.WriteLine("A. Common Search Conditions");
       Console.WriteLine("B. Count \\ Distinct Demos");
+      Console.WriteLine("C. GetCount Demos");
+      Console.WriteLine("D. GetCountBy Demos");
       Console.WriteLine("X. Quit");
       Console.WriteLine();
 

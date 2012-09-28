@@ -29,6 +29,12 @@
                 db.OrderDetails.OrderId.Count()),
                 "");
 
+      //select count(orderid) from OrderDetails
+      ExampleRunner.RunQuery(
+        "select count(*) from OrderDetails using db.OrderDetails.Count()",
+            db => db.OrderDetails.Count(),
+                "");
+
       //select count(distinct orderid) from orderdetails using .distinct().count()
       ExampleRunner.RunQuery(
         "select count(distinct orderid) from orderdetails",
