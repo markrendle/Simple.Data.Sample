@@ -17,11 +17,55 @@ namespace SimpleDataSample
             break;
           case "2":
             var AllMethodDemo = new AllMethodSamples();
-            AllMethodSamples.RunAll();
+            AllMethodDemo.RunAll();
             break;
           case "3":
             var FindByMethodDemo = new FindByMethodSamples();
-            FindByMethodSamples.RunAll();
+            FindByMethodDemo.RunAll();
+            break;
+          case "4":
+            var FindAllByMethodDemo = new FindAllByMethodSamples();
+            FindAllByMethodDemo.RunAll();
+            break;
+          case "5":
+            var GetMethodDemo = new GetMethodSamples();
+            GetMethodDemo.RunAll();
+            break;
+          case "6":
+            var FindMethodDemo = new FindMethodSamples();
+            FindMethodDemo.RunAll();
+            break;
+          case "7":
+            var FindAllMethodDemo = new FindAllMethodSamples();
+            FindAllMethodDemo.RunAll();
+            break;
+          case "8":
+            var ColumnSelectionDemo = new ColumnSelectionSamples();
+            ColumnSelectionDemo.RunAll();
+            break;
+          case "9":
+            var BasicWhereDemo = new WhereMethodSamples();
+            BasicWhereDemo.RunAll();
+            break;
+          case "a":
+          case "A":
+            var CommonSearchesDemo = new WhereConditionSamples();
+            CommonSearchesDemo.RunAll();
+            break;
+          case "b":
+          case "B":
+            var CountDistinctDemo = new CountDistinctSamples();
+            CountDistinctDemo.RunAll();
+            break;
+          case "c":
+          case "C":
+            var GetCountDemo = new GetCountMethodSamples();
+            GetCountDemo.RunAll();
+            break;
+          case "d":
+          case "D":
+            var GetCountByDemo = new GetCountByMethodSamples();
+            GetCountByDemo.RunAll();
             break;
           case "x":
           case "X":
@@ -45,6 +89,16 @@ namespace SimpleDataSample
       Console.WriteLine("1. Open Database Demos");
       Console.WriteLine("2. Basic Selection with All()");
       Console.WriteLine("3. Basic Selection with FindBy()");
+      Console.WriteLine("4. Basic Selection with FindAllBy()");
+      Console.WriteLine("5. Basic Selection with Get()");
+      Console.WriteLine("6. Basic Selection with Find()");
+      Console.WriteLine("7. Basic Selection with FindAll()");
+      Console.WriteLine("8. Column Selection and Aliasing");
+      Console.WriteLine("9. Basic use of Where()");
+      Console.WriteLine("A. Common Search Conditions");
+      Console.WriteLine("B. Count \\ Distinct Demos");
+      Console.WriteLine("C. GetCount Demos");
+      Console.WriteLine("D. GetCountBy Demos");
       Console.WriteLine("X. Quit");
       Console.WriteLine();
 
