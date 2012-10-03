@@ -57,6 +57,9 @@
   <ItemGroup>
     <Compile Include="2_Basics\AllMethodSamples.cs" />
     <Compile Include="2_Basics\ColumnSelectionSamples.cs" />
+    <Compile Include="2_Basics\ToScalarCollectionSamples.cs" />
+    <Compile Include="2_Basics\ToScalarSamples.cs" />
+    <Compile Include="2_Basics\PocoMethodSamples.cs" />
     <Compile Include="2_Basics\GetCountByMethodSamples.cs" />
     <Compile Include="2_Basics\GetCountMethodSamples.cs" />
     <Compile Include="2_Basics\CountDistinctSamples.cs" />
@@ -69,6 +72,7 @@
     <Compile Include="ExampleRunner.cs" />
     <Compile Include="1_GettingStarted\OpenDatabaseSamples.cs" />
     <Compile Include="2_Basics\FindByMethodSamples.cs" />
+    <Compile Include="POCO\MusicStore.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="zzOldSamples\CallingStoredProcedureExamples.cs" />

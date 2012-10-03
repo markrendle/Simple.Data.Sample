@@ -9,16 +9,14 @@
         "select * from Albums using db.Albums.Star()",
         db => db.Albums.All()
           .Select(
-            db.Albums.Star()),
-            "Title");
+            db.Albums.Star()));
 
       // select count(*) from OrderDetails using .Star().Count()
       ExampleRunner.RunQuery(
         "select * from Albums using db.Albums.AllColumns()",
         db => db.Albums.All()
           .Select(
-            db.Albums.AllColumns()),
-            "Title");
+            db.Albums.AllColumns()));
 
 
       ExampleRunner.RunQuery(

@@ -67,6 +67,21 @@ namespace SimpleDataSample
             var GetCountByDemo = new GetCountByMethodSamples();
             GetCountByDemo.RunAll();
             break;
+          case "e":
+          case "E":
+            var PocoDemo = new PocoMethodSamples();
+            PocoDemo.RunAll();
+            break;
+          case "f":
+          case "F":
+            var ScalarDemo = new ToScalarSamples();
+            ScalarDemo.RunAll();
+            break;
+          case "g":
+          case "G":
+            var ScalarCollectionDemo = new ToScalarCollectionSamples();
+            ScalarCollectionDemo.RunAll();
+            break;
           case "x":
           case "X":
             Console.WriteLine("Fin");
@@ -99,6 +114,9 @@ namespace SimpleDataSample
       Console.WriteLine("B. Count \\ Distinct Demos");
       Console.WriteLine("C. GetCount Demos");
       Console.WriteLine("D. GetCountBy Demos");
+      Console.WriteLine("E. Poco Demos");
+      Console.WriteLine("F. ToScalar Demos");
+      Console.WriteLine("G. ToScalar Collection Demos");
       Console.WriteLine("X. Quit");
       Console.WriteLine();
 

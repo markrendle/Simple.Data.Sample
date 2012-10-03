@@ -3,6 +3,7 @@ using System.Diagnostics;
 using Simple.Data;
 using System.Collections.Generic;
 using System.Text;
+using SimpleDataSample.POCO;
 
 namespace SimpleDataSample
 {
@@ -14,7 +15,7 @@ namespace SimpleDataSample
     /// <param name="explanation">Text description of query being made</param>
     /// <param name="dbQuery">Function taking db and running query over it</param>
     /// <param name="propertyNamesToList">List of properties to display</param>
-    public static void RunQuery(string explanation, Func<dynamic, dynamic> dbQuery, params string[] propertyNamesToList)
+    public static void RunQuery(string explanation, Func<dynamic, dynamic> dbQuery, List<string> propertyNamesToList, string pocoType)
     {
       try
       {
@@ -25,7 +26,7 @@ namespace SimpleDataSample
 
         var db = Database.Open();
         var results = dbQuery(db);
-        ListReturnedProperties(results, propertyNamesToList);
+        ListReturnedProperties(results, propertyNamesToList, pocoType);
 
         ShowSql(listener);
 
@@ -40,9 +41,14 @@ namespace SimpleDataSample
       Console.ReadLine();
     }
 
+    public static void RunQuery(string explanation, Func<dynamic, dynamic> dbQuery, List<string> propertyNamesToList)
+    {
+      RunQuery(explanation, dbQuery, propertyNamesToList, String.Empty);
+    }
+
     public static void RunQuery(string explanation, Func<dynamic, dynamic> dbQuery)
     {
-      RunQuery(explanation, dbQuery, "Title");
+      RunQuery(explanation, dbQuery, new List<string>{"Title"}, String.Empty);
     }
 
     private static void ShowException(Exception ex)
@@ -70,7 +76,7 @@ namespace SimpleDataSample
       Console.ResetColor();
     }
 
-    private static void ListReturnedProperties(dynamic results, params string[] propertyNamesToList)
+    private static void ListReturnedProperties(dynamic results, List<string> propertyNamesToList, string pocoType)
     {
       if (results == null)
       {
@@ -78,7 +84,78 @@ namespace SimpleDataSample
         return;
       }
 
+      switch (pocoType)
+      {
+        case "Album":
+          Album album = results;
+          Console.WriteLine(album.ToString());
+          break;
+        case "AlbumList":
+          List<Album> albumList = results;
+          Console.WriteLine("Number of items: {0}", albumList.Count);
+          foreach (Album lp in albumList)
+          {
+            Console.WriteLine(lp.ToString());
+          }
+          break;
+        case "AlbumArray":
+          Album[] albumArray = results;
+          Console.WriteLine("Number of items: {0}", albumArray.Length);
+          foreach (Album lp in albumArray)
+          {
+            Console.WriteLine(lp.ToString());
+          }
+          break;
+        case "DynamicList":
+          List<dynamic> dynamicList = results;
+          Console.WriteLine("Number of items: {0}", dynamicList.Count);
+          foreach (dynamic item in dynamicList)
+          {
+            ListReturnedPropertiesInDynamicObject(item, propertyNamesToList);
+          }
+          break;
+        case "DynamicArray":
+          dynamic[] dynamicArray = results;
+          Console.WriteLine("Number of items: {0}", dynamicArray.Length);
+          foreach (dynamic item in dynamicArray)
+          {
+            ListReturnedPropertiesInDynamicObject(item, propertyNamesToList);
+          }
+          break;
+        case "AlbumEnumerable":
+          IEnumerable<Album> albums = results;
+          foreach (Album lp in albums)
+          {
+            Console.WriteLine(lp.ToString());
+          }
+          break;
+        case "StringList":
+          List<string> stringList = results;
+          Console.WriteLine("Number of items: {0}", stringList.Count);
+          foreach (string item in results)
+          {
+            Console.WriteLine(item);
+          }
+          break;
+        case "StringArray":
+          string[] stringArray = results;
+          Console.WriteLine("Number of items: {0}", stringArray.Length);
+          foreach (string item in results)
+          {
+            Console.WriteLine(item);
+          }
+          break;
+        default:
+          ListReturnedPropertiesInDynamicObject(results, propertyNamesToList);
+          break;
+      }
+
+    }
+
+    private static void ListReturnedPropertiesInDynamicObject(dynamic results, List<string> propertyNamesToList)
+    {
       Console.WriteLine("Query returned a {0}", results.GetType().FullName);
+
 
       if (results is int)
       {
@@ -105,7 +182,7 @@ namespace SimpleDataSample
       }
     }
 
-    private static string GetPropertyValues(dynamic result, string[] propertyNamesToList)
+    private static string GetPropertyValues(dynamic result, List<string> propertyNamesToList)
     {
       StringBuilder sb = new StringBuilder();
       IDictionary<string, object> resultAsDictionary = (IDictionary<string, object>)result;

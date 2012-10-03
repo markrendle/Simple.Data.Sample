@@ -1,4 +1,5 @@
-﻿namespace SimpleDataSample
+﻿using System.Collections.Generic;
+namespace SimpleDataSample
 {
   class CountDistinctSamples
   {
@@ -10,7 +11,7 @@
             db => db.OrderDetails.All()
               .Select(
                 db.OrderDetails.OrderId.Distinct()),
-                "OrderId");
+                new List<string>{"OrderId"});
 
       //select distinct orderid, albumid from OrderDetails
       ExampleRunner.RunQuery(
@@ -19,7 +20,7 @@
           .Select(
           db.OrderDetails.OrderId.Distinct(),
           db.OrderDetails.AlbumId),
-          "OrderId", "AlbumId");
+          new List<string>{"OrderId", "AlbumId"});
 
       //select count(orderid) from OrderDetails
       ExampleRunner.RunQuery(
@@ -27,13 +28,13 @@
             db => db.OrderDetails.All()
               .Select(
                 db.OrderDetails.OrderId.Count()),
-                "");
+                new List<string>{""});
 
       //select count(orderid) from OrderDetails
       ExampleRunner.RunQuery(
         "select count(*) from OrderDetails using db.OrderDetails.Count()",
             db => db.OrderDetails.Count(),
-                "");
+                new List<string>{""});
 
       //select count(distinct orderid) from orderdetails using .distinct().count()
       ExampleRunner.RunQuery(
@@ -41,7 +42,7 @@
                     db => db.orderdetails.all()
               .select(
                 db.orderdetails.orderid.distinct().count()),
-                "");
+                new List<string>{""});
 
       //select distinct count(orderid) from OrderDetails
       ExampleRunner.RunQuery(
@@ -49,7 +50,7 @@
                     db => db.OrderDetails.All()
               .Select(
                 db.OrderDetails.OrderId.Count().Distinct()),
-                "");
+                new List<string>{""});
 
       //select count(distinct orderid) from OrderDetails
       ExampleRunner.RunQuery(
@@ -57,7 +58,7 @@
                     db => db.OrderDetails.All()
               .Select(
                 db.OrderDetails.OrderId.CountDistinct()),
-                "");
+                new List<string>{""});
 
     }
   }
