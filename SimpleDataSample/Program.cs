@@ -82,6 +82,26 @@ namespace SimpleDataSample
             var ScalarCollectionDemo = new ToScalarCollectionSamples();
             ScalarCollectionDemo.RunAll();
             break;
+          case "h":
+          case "H":
+            var NaturalJoinDemo = new NaturalJoinSamples();
+            NaturalJoinDemo.RunAll();
+            break;
+          case "i":
+          case "I":
+            var ExplicitJoinDemo = new ExplicitJoinSamples();
+            ExplicitJoinDemo.RunAll();
+            break;
+          case "j":
+          case "J":
+            var OuterJoinDemo = new OuterJoinSamples();
+            OuterJoinDemo.RunAll();
+            break;
+          case "k":
+          case "K":
+            var LeftJoinDemo = new LeftJoinSamples();
+            LeftJoinDemo.RunAll();
+            break;
           case "x":
           case "X":
             Console.WriteLine("Fin");
@@ -117,6 +137,10 @@ namespace SimpleDataSample
       Console.WriteLine("E. Poco Demos");
       Console.WriteLine("F. ToScalar Demos");
       Console.WriteLine("G. ToScalar Collection Demos");
+      Console.WriteLine("H. Natural Join Demos");
+      Console.WriteLine("I. Explicit Join Demos");
+      Console.WriteLine("J. Outer Join Demos");
+      Console.WriteLine("K. Left Join Demos");
       Console.WriteLine("X. Quit");
       Console.WriteLine();
 

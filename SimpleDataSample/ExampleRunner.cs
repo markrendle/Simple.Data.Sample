@@ -106,6 +106,10 @@ namespace SimpleDataSample
             Console.WriteLine(lp.ToString());
           }
           break;
+        case "Order":
+          Order order = results;
+          Console.WriteLine(order.ToString());
+          break;
         case "DynamicList":
           List<dynamic> dynamicList = results;
           Console.WriteLine("Number of items: {0}", dynamicList.Count);

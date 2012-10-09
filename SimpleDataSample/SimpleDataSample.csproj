@@ -57,6 +57,10 @@
   <ItemGroup>
     <Compile Include="2_Basics\AllMethodSamples.cs" />
     <Compile Include="2_Basics\ColumnSelectionSamples.cs" />
+    <Compile Include="2_Basics\LeftJoinSamples.cs" />
+    <Compile Include="2_Basics\OuterJoinSamples.cs" />
+    <Compile Include="2_Basics\ExplicitJoinSamples.cs" />
+    <Compile Include="2_Basics\NaturalJoinSamples.cs" />
     <Compile Include="2_Basics\ToScalarCollectionSamples.cs" />
     <Compile Include="2_Basics\ToScalarSamples.cs" />
     <Compile Include="2_Basics\PocoMethodSamples.cs" />
@@ -93,8 +97,19 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SqlScripts\DatabaseCreation.sql" />
-    <Content Include="SqlScripts\MvcMusicStore-Create.sql" />
+    <Content Include="MvcMusicStore\Data\dbo.Albums_Data.sql" />
+    <Content Include="MvcMusicStore\Data\dbo.Artists_Data.sql" />
+    <Content Include="MvcMusicStore\Data\dbo.Carts_Data.sql" />
+    <Content Include="MvcMusicStore\Data\dbo.Genres_Data.sql" />
+    <Content Include="MvcMusicStore\Data\dbo.OrderDetails_Data.sql" />
+    <Content Include="MvcMusicStore\Data\dbo.Orders_Data.sql" />
+    <Content Include="MvcMusicStore\Tables\dbo.Albums.sql" />
+    <Content Include="MvcMusicStore\Tables\dbo.Artists.sql" />
+    <Content Include="MvcMusicStore\Tables\dbo.Carts.sql" />
+    <Content Include="MvcMusicStore\Tables\dbo.Genres.sql" />
+    <Content Include="MvcMusicStore\Tables\dbo.OrderDetails.sql" />
+    <Content Include="MvcMusicStore\Tables\dbo.Orders.sql" />
+    <Content Include="MvcMusicStore\MvcMusicStore-Create.sql" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
