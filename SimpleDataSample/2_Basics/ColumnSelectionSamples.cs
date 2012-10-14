@@ -1,4 +1,5 @@
-﻿namespace SimpleDataSample
+﻿using System.Collections.Generic;
+namespace SimpleDataSample
 {
   class ColumnSelectionSamples
   {
@@ -117,6 +118,8 @@
             db.Albums.AlbumId,
             db.Albums.Title.As("AlbumName"))
             );
+
+
     }
   }
 }

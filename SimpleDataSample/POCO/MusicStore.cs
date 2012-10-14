@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace SimpleDataSample.POCO
@@ -51,6 +52,7 @@ namespace SimpleDataSample.POCO
   {
     public int ArtistId { get; set; }
     public string Name { get; set; }
+    public List<Album> Albums { get; set; }
 
     public override string ToString()
     {

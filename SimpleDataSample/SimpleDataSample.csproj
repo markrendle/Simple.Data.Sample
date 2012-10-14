@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="2_Basics\AllMethodSamples.cs" />
     <Compile Include="2_Basics\ColumnSelectionSamples.cs" />
+    <Compile Include="2_Basics\LazyVsEagerLoadingDemo.cs" />
     <Compile Include="2_Basics\LeftJoinSamples.cs" />
     <Compile Include="2_Basics\OuterJoinSamples.cs" />
     <Compile Include="2_Basics\ExplicitJoinSamples.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="2_Basics\FindMethodSamples.cs" />
     <Compile Include="2_Basics\GetMethodSamples.cs" />
     <Compile Include="2_Basics\FindAllByMethodSamples.cs" />
+    <Compile Include="JoinRunner.cs" />
     <Compile Include="ExampleRunner.cs" />
     <Compile Include="1_GettingStarted\OpenDatabaseSamples.cs" />
     <Compile Include="2_Basics\FindByMethodSamples.cs" />
@@ -94,7 +96,9 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MvcMusicStore\Data\dbo.Albums_Data.sql" />

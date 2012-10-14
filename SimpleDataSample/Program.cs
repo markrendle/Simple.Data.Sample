@@ -102,6 +102,11 @@ namespace SimpleDataSample
             var LeftJoinDemo = new LeftJoinSamples();
             LeftJoinDemo.RunAll();
             break;
+          case "l":
+          case "L":
+            var LazyEagerDemo = new LazyVsEagerLoadingSamples();
+            LazyEagerDemo.RunAll();
+            break;
           case "x":
           case "X":
             Console.WriteLine("Fin");
@@ -141,6 +146,7 @@ namespace SimpleDataSample
       Console.WriteLine("I. Explicit Join Demos");
       Console.WriteLine("J. Outer Join Demos");
       Console.WriteLine("K. Left Join Demos");
+      Console.WriteLine("L. Lazy vs Eager Loading Demos");
       Console.WriteLine("X. Quit");
       Console.WriteLine();
 
