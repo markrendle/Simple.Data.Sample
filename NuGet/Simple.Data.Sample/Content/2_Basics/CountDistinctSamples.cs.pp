@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-namespace SimpleDataSample
+namespace $rootnamespace$
 {
   class CountDistinctSamples
   {

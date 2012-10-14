@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleDataSample
+namespace $rootnamespace$
 {
   class Program
   {

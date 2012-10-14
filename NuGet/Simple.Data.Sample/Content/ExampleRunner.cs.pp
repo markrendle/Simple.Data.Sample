@@ -3,9 +3,9 @@ using System.Diagnostics;
 using Simple.Data;
 using System.Collections.Generic;
 using System.Text;
-using SimpleDataSample.POCO;
+using $rootnamespace$.POCO;
 
-namespace SimpleDataSample
+namespace $rootnamespace$
 {
   static class ExampleRunner
   {

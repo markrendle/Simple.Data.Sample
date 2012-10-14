@@ -2,8 +2,8 @@
 <package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>Simple.Data.Sample</id>
-    <version>0.4.4</version>
-    <authors>Mark Rendle</authors>
+    <version>0.18.1.0</version>
+    <authors>Mark Rendle, Dan Maharry</authors>
     <owners>Mark Rendle</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This sample demonstrates how to use Simple.Data against a SQL Server database.</description>
@@ -12,7 +12,7 @@
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
     <language>en-US</language>
     <dependencies>
-      <dependency id="Simple.Data.SqlServer" version="0.4.4" />
+      <dependency id="Simple.Data.SqlServer" version="0.18.1.0" />
     </dependencies>
   </metadata>
 </package>
