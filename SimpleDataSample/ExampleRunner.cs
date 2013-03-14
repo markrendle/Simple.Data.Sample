@@ -9,13 +9,14 @@ namespace SimpleDataSample
 {
   static class ExampleRunner
   {
-    /// <summary>
-    /// Runs a query and displays the nominated properties
-    /// </summary>
-    /// <param name="explanation">Text description of query being made</param>
-    /// <param name="dbQuery">Function taking db and running query over it</param>
-    /// <param name="propertyNamesToList">List of properties to display</param>
-    public static void RunQuery(string explanation, Func<dynamic, dynamic> dbQuery, List<string> propertyNamesToList, string pocoType)
+      /// <summary>
+      /// Runs a query and displays the nominated properties
+      /// </summary>
+      /// <param name="explanation">Text description of query being made</param>
+      /// <param name="dbQuery">Function taking db and running query over it</param>
+      /// <param name="propertyNamesToList">List of properties to display</param>
+      /// <param name="pocoType">Type of POCO being created</param>
+      public static void RunQuery(string explanation, Func<dynamic, dynamic> dbQuery, List<string> propertyNamesToList, string pocoType)
     {
       try
       {
@@ -186,7 +187,7 @@ namespace SimpleDataSample
       }
     }
 
-    private static string GetPropertyValues(dynamic result, List<string> propertyNamesToList)
+    private static string GetPropertyValues(dynamic result, IEnumerable<string> propertyNamesToList)
     {
       StringBuilder sb = new StringBuilder();
       IDictionary<string, object> resultAsDictionary = (IDictionary<string, object>)result;

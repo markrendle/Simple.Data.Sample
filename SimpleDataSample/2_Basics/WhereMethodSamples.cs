@@ -56,7 +56,7 @@ namespace SimpleDataSample
 
     private dynamic CompareStringBuilderProduction(dynamic db)
     {
-      StringBuilder sb = new StringBuilder("Dark Side ");
+      var sb = new StringBuilder("Dark Side ");
       sb.Append("Of The Moon");
       return db.Albums.All().Where(db.Albums.Title == sb.ToString());
     }
