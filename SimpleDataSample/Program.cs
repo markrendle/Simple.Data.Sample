@@ -2,154 +2,153 @@
 
 namespace SimpleDataSample
 {
-  class Program
-  {
-    static void Main(string[] args)
+    internal class Program
     {
-      do
-      {
-        ShowOptions();
-        switch (Console.ReadLine())
+        private static void Main()
         {
-          case "1":
-            var OpenDbDemo = new OpenDatabaseSamples();
-            OpenDbDemo.RunAll();
-            break;
-          case "2":
-            var AllMethodDemo = new AllMethodSamples();
-            AllMethodDemo.RunAll();
-            break;
-          case "3":
-            var FindByMethodDemo = new FindByMethodSamples();
-            FindByMethodDemo.RunAll();
-            break;
-          case "4":
-            var FindAllByMethodDemo = new FindAllByMethodSamples();
-            FindAllByMethodDemo.RunAll();
-            break;
-          case "5":
-            var GetMethodDemo = new GetMethodSamples();
-            GetMethodDemo.RunAll();
-            break;
-          case "6":
-            var FindMethodDemo = new FindMethodSamples();
-            FindMethodDemo.RunAll();
-            break;
-          case "7":
-            var FindAllMethodDemo = new FindAllMethodSamples();
-            FindAllMethodDemo.RunAll();
-            break;
-          case "8":
-            var ColumnSelectionDemo = new ColumnSelectionSamples();
-            ColumnSelectionDemo.RunAll();
-            break;
-          case "9":
-            var BasicWhereDemo = new WhereMethodSamples();
-            BasicWhereDemo.RunAll();
-            break;
-          case "a":
-          case "A":
-            var CommonSearchesDemo = new WhereConditionSamples();
-            CommonSearchesDemo.RunAll();
-            break;
-          case "b":
-          case "B":
-            var CountDistinctDemo = new CountDistinctSamples();
-            CountDistinctDemo.RunAll();
-            break;
-          case "c":
-          case "C":
-            var GetCountDemo = new GetCountMethodSamples();
-            GetCountDemo.RunAll();
-            break;
-          case "d":
-          case "D":
-            var GetCountByDemo = new GetCountByMethodSamples();
-            GetCountByDemo.RunAll();
-            break;
-          case "e":
-          case "E":
-            var PocoDemo = new PocoMethodSamples();
-            PocoDemo.RunAll();
-            break;
-          case "f":
-          case "F":
-            var ScalarDemo = new ToScalarSamples();
-            ScalarDemo.RunAll();
-            break;
-          case "g":
-          case "G":
-            var ScalarCollectionDemo = new ToScalarCollectionSamples();
-            ScalarCollectionDemo.RunAll();
-            break;
-          case "h":
-          case "H":
-            var NaturalJoinDemo = new NaturalJoinSamples();
-            NaturalJoinDemo.RunAll();
-            break;
-          case "i":
-          case "I":
-            var ExplicitJoinDemo = new ExplicitJoinSamples();
-            ExplicitJoinDemo.RunAll();
-            break;
-          case "j":
-          case "J":
-            var OuterJoinDemo = new OuterJoinSamples();
-            OuterJoinDemo.RunAll();
-            break;
-          case "k":
-          case "K":
-            var LeftJoinDemo = new LeftJoinSamples();
-            LeftJoinDemo.RunAll();
-            break;
-          case "l":
-          case "L":
-            var LazyEagerDemo = new LazyVsEagerLoadingSamples();
-            LazyEagerDemo.RunAll();
-            break;
-          case "x":
-          case "X":
-            Console.WriteLine("Fin");
-            return;
-          default:
-            Console.WriteLine("Not a valid option. Choose again");
-            break;
+            do
+            {
+                ShowOptions();
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        var openDbDemo = new OpenDatabaseSamples();
+                        openDbDemo.RunAll();
+                        break;
+                    case "2":
+                        var allMethodDemo = new AllMethodSamples();
+                        allMethodDemo.RunAll();
+                        break;
+                    case "3":
+                        var findByMethodDemo = new FindByMethodSamples();
+                        findByMethodDemo.RunAll();
+                        break;
+                    case "4":
+                        var findAllByMethodDemo = new FindAllByMethodSamples();
+                        findAllByMethodDemo.RunAll();
+                        break;
+                    case "5":
+                        var getMethodDemo = new GetMethodSamples();
+                        getMethodDemo.RunAll();
+                        break;
+                    case "6":
+                        var findMethodDemo = new FindMethodSamples();
+                        findMethodDemo.RunAll();
+                        break;
+                    case "7":
+                        var findAllMethodDemo = new FindAllMethodSamples();
+                        findAllMethodDemo.RunAll();
+                        break;
+                    case "8":
+                        var columnSelectionDemo = new ColumnSelectionSamples();
+                        columnSelectionDemo.RunAll();
+                        break;
+                    case "9":
+                        var basicWhereDemo = new WhereMethodSamples();
+                        basicWhereDemo.RunAll();
+                        break;
+                    case "a":
+                    case "A":
+                        var commonSearchesDemo = new WhereConditionSamples();
+                        commonSearchesDemo.RunAll();
+                        break;
+                    case "b":
+                    case "B":
+                        var countDistinctDemo = new CountDistinctSamples();
+                        countDistinctDemo.RunAll();
+                        break;
+                    case "c":
+                    case "C":
+                        var getCountDemo = new GetCountMethodSamples();
+                        getCountDemo.RunAll();
+                        break;
+                    case "d":
+                    case "D":
+                        var getCountByDemo = new GetCountByMethodSamples();
+                        getCountByDemo.RunAll();
+                        break;
+                    case "e":
+                    case "E":
+                        var pocoDemo = new PocoMethodSamples();
+                        pocoDemo.RunAll();
+                        break;
+                    case "f":
+                    case "F":
+                        var scalarDemo = new ToScalarSamples();
+                        scalarDemo.RunAll();
+                        break;
+                    case "g":
+                    case "G":
+                        var scalarCollectionDemo = new ToScalarCollectionSamples();
+                        scalarCollectionDemo.RunAll();
+                        break;
+                    case "h":
+                    case "H":
+                        var naturalJoinDemo = new NaturalJoinSamples();
+                        naturalJoinDemo.RunAll();
+                        break;
+                    case "i":
+                    case "I":
+                        var explicitJoinDemo = new ExplicitJoinSamples();
+                        explicitJoinDemo.RunAll();
+                        break;
+                    case "j":
+                    case "J":
+                        var outerJoinDemo = new OuterJoinSamples();
+                        outerJoinDemo.RunAll();
+                        break;
+                    case "k":
+                    case "K":
+                        var leftJoinDemo = new LeftJoinSamples();
+                        leftJoinDemo.RunAll();
+                        break;
+                    case "l":
+                    case "L":
+                        var lazyEagerDemo = new LazyVsEagerLoadingSamples();
+                        lazyEagerDemo.RunAll();
+                        break;
+                    case "x":
+                    case "X":
+                        Console.WriteLine("Fin");
+                        return;
+                    default:
+                        Console.WriteLine("Not a valid option. Choose again");
+                        break;
+                }
+            } while (true);
         }
-      } while (true);
-    }
 
-    private static void ShowOptions()
-    {
-      Console.WriteLine();
-      Console.WriteLine("--------");
-      Console.WriteLine();
-      Console.WriteLine("Simple.Data Samples");
-      Console.WriteLine("Choose from the following options");
-      Console.WriteLine();
-      Console.WriteLine("1. Open Database Demos");
-      Console.WriteLine("2. Basic Selection with All()");
-      Console.WriteLine("3. Basic Selection with FindBy()");
-      Console.WriteLine("4. Basic Selection with FindAllBy()");
-      Console.WriteLine("5. Basic Selection with Get()");
-      Console.WriteLine("6. Basic Selection with Find()");
-      Console.WriteLine("7. Basic Selection with FindAll()");
-      Console.WriteLine("8. Column Selection and Aliasing");
-      Console.WriteLine("9. Basic use of Where()");
-      Console.WriteLine("A. Common Search Conditions");
-      Console.WriteLine("B. Count \\ Distinct Demos");
-      Console.WriteLine("C. GetCount Demos");
-      Console.WriteLine("D. GetCountBy Demos");
-      Console.WriteLine("E. Poco Demos");
-      Console.WriteLine("F. ToScalar Demos");
-      Console.WriteLine("G. ToScalar Collection Demos");
-      Console.WriteLine("H. Natural Join Demos");
-      Console.WriteLine("I. Explicit Join Demos");
-      Console.WriteLine("J. Outer Join Demos");
-      Console.WriteLine("K. Left Join Demos");
-      Console.WriteLine("L. Lazy vs Eager Loading Demos");
-      Console.WriteLine("X. Quit");
-      Console.WriteLine();
-
+        private static void ShowOptions()
+        {
+            Console.WriteLine();
+            Console.WriteLine("--------");
+            Console.WriteLine();
+            Console.WriteLine("Simple.Data Samples");
+            Console.WriteLine("Choose from the following options");
+            Console.WriteLine();
+            Console.WriteLine("1. Open Database Demos");
+            Console.WriteLine("2. Basic Selection with All()");
+            Console.WriteLine("3. Basic Selection with FindBy()");
+            Console.WriteLine("4. Basic Selection with FindAllBy()");
+            Console.WriteLine("5. Basic Selection with Get()");
+            Console.WriteLine("6. Basic Selection with Find()");
+            Console.WriteLine("7. Basic Selection with FindAll()");
+            Console.WriteLine("8. Column Selection and Aliasing");
+            Console.WriteLine("9. Basic use of Where()");
+            Console.WriteLine("A. Common Search Conditions");
+            Console.WriteLine("B. Count \\ Distinct Demos");
+            Console.WriteLine("C. GetCount Demos");
+            Console.WriteLine("D. GetCountBy Demos");
+            Console.WriteLine("E. Poco Demos");
+            Console.WriteLine("F. ToScalar Demos");
+            Console.WriteLine("G. ToScalar Collection Demos");
+            Console.WriteLine("H. Natural Join Demos");
+            Console.WriteLine("I. Explicit Join Demos");
+            Console.WriteLine("J. Outer Join Demos");
+            Console.WriteLine("K. Left Join Demos");
+            Console.WriteLine("L. Lazy vs Eager Loading Demos");
+            Console.WriteLine("X. Quit");
+            Console.WriteLine();
+        }
     }
-  }
 }

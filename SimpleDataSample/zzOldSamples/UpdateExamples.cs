@@ -1,25 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
 using Simple.Data;
 
 namespace SimpleDataSample.Samples
 {
-    class UpdateExamples
+    internal class UpdateExamples
     {
         public static void UpdateUsingNamedParameters()
         {
-            var db = Database.Open();
+            dynamic db = Database.Open();
             int updatedCount = db.Customers.UpdateByCustomerId(CustomerId: 1, Address: "Milton Keynes");
             Console.WriteLine(updatedCount);
         }
 
         public static void UpdateUsingDynamicObjectWithExplicitCriteria()
         {
-            var db = Database.Open();
-            var customer = db.Customers.FindByCustomerId(1);
+            dynamic db = Database.Open();
+            dynamic customer = db.Customers.FindByCustomerId(1);
             customer.Address = "Changed";
             db.Customers.UpdateByCustomerId(customer);
 
@@ -31,8 +27,8 @@ namespace SimpleDataSample.Samples
         {
             // When the table has a primary key, you don't need to explicitly specify the criteria
 
-            var db = Database.Open();
-            var customer = db.Customers.FindByCustomerId(1);
+            dynamic db = Database.Open();
+            dynamic customer = db.Customers.FindByCustomerId(1);
             customer.Address = "Changed";
             db.Customers.Update(customer);
         }
