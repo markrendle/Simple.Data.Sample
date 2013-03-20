@@ -11,20 +11,20 @@
 
             // Runs select count(*) from albums
             ExampleRunner.RunQuery(
-                "Run GetCount(db.Albums.GenreId) - just the column name. Expected null. Runs select count(*) from albums",
+                "Run GetCount(db.Albums.GenreId) - just the column name. Throws Simple.Data.BadExpressionException",
                 db => db.Albums.GetCount(db.Albums.GenreId));
 
             // Runs select count(*) from albums
             ExampleRunner.RunQuery(
-                "Run GetCount(1) - no column names. Expected null. Runs select count(*) from albums",
+                "Run GetCount(1) - no column names. Throws Simple.Data.BadExpressionException",
                 db => db.Albums.GetCount(1));
 
             ExampleRunner.RunQuery(
-                "Albums.GetCount(db.Albums.GenreId = null). Malformed Simple Expression. Throws Microsoft.CSharp.RuntimeBinderException. Expected MalformedExpressionException",
+                "Albums.GetCount(db.Albums.GenreId = null). Throws Simple.Data.BadExpressionException",
                 db => db.Albums.GetCount(db.Albums.GenreId = null));
 
             ExampleRunner.RunQuery(
-                "Albums.GetCount(db.Albums.GenreId == \"a\"). Malformed Simple Expression. Throws System.FormatException. Expected MalformedExpressionException",
+                "Albums.GetCount(db.Albums.GenreId == \"a\"). Malformed Simple Expression. Throws System.FormatException.",
                 db => db.Albums.GetCount(db.Albums.GenreId == "a"));
 
             // select COUNT(*) from [dbo].[Albums] WHERE [dbo].[Albums].[GenreId] IS NOT NULL
@@ -74,7 +74,7 @@
 
             // Runs select count(*) from albums
             ExampleRunner.RunQuery(
-                "Albums.GetCount(db.Albums.GenreId == 1, db.Albums.ArtistId == 120). Expected null or Exception as only one SimpleExpression allowed in GetCount",
+                "Albums.GetCount(db.Albums.GenreId == 1, db.Albums.ArtistId == 120). Throws System.ArgumentException as only one SimpleExpression allowed in GetCount",
                 db => db.Albums.GetCount(db.Albums.GenreId == 1, db.Albums.ArtistId == 120));
         }
     }
