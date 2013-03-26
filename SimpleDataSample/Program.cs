@@ -107,6 +107,16 @@ namespace SimpleDataSample
                         var lazyEagerDemo = new LazyVsEagerLoadingSamples();
                         lazyEagerDemo.RunAll();
                         break;
+                    case "m":
+                    case "M":
+                        var existsDemo = new ExistsMethodSamples();
+                        existsDemo.RunAll();
+                        break;
+                    case "n":
+                    case "N":
+                        var existsByDemo = new ExistsByMethodSamples();
+                        existsByDemo.RunAll();
+                        break;
                     case "x":
                     case "X":
                         Console.WriteLine("Fin");
@@ -147,6 +157,8 @@ namespace SimpleDataSample
             Console.WriteLine("J. Outer Join Demos");
             Console.WriteLine("K. Left Join Demos");
             Console.WriteLine("L. Lazy vs Eager Loading Demos");
+            Console.WriteLine("M. Any \\ Exists Demos");
+            Console.WriteLine("N. AnyBy \\ ExistsBy Demos");
             Console.WriteLine("X. Quit");
             Console.WriteLine();
         }

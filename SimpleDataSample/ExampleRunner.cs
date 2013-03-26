@@ -50,7 +50,7 @@ namespace SimpleDataSample
 
         public static void RunQuery(string explanation, Func<dynamic, dynamic> dbQuery)
         {
-            RunQuery(explanation, dbQuery, new List<string> {"Title"}, String.Empty);
+            RunQuery(explanation, dbQuery, new List<string> { "Title" }, String.Empty);
         }
 
         private static void ShowException(Exception ex)
@@ -161,7 +161,11 @@ namespace SimpleDataSample
         {
             Console.WriteLine("Query returned a {0}", results.GetType().FullName);
 
-
+            if (results is bool)
+            {
+                Console.WriteLine("A boolean: " + results.ToString());
+                return;                
+            }
             if (results is int)
             {
                 Console.WriteLine("An integer: " + results.ToString());
@@ -173,24 +177,38 @@ namespace SimpleDataSample
                 Console.WriteLine("A string: " + results);
                 return;
             }
-
+            if (results is float)
+            {
+                Console.WriteLine("A float: " + results);
+                return;
+            }
+            if (results is double)
+            {
+                Console.WriteLine("A double: " + results);
+                return;
+            }
+            if (results is Decimal)
+            {
+                Console.WriteLine("A Decimal: " + results.ToString());
+                return;
+            }
             if (results is SimpleRecord)
             {
                 Console.WriteLine(GetPropertyValues(results, propertyNamesToList));
+                return;
             }
-            else
+
+            // Assume is SimpleQuery
+            foreach (dynamic result in results)
             {
-                foreach (dynamic result in results)
-                {
-                    Console.WriteLine(GetPropertyValues(result, propertyNamesToList));
-                }
+                Console.WriteLine(GetPropertyValues(result, propertyNamesToList));
             }
         }
 
         private static string GetPropertyValues(dynamic result, IEnumerable<string> propertyNamesToList)
         {
             var sb = new StringBuilder();
-            var resultAsDictionary = (IDictionary<string, object>) result;
+            var resultAsDictionary = (IDictionary<string, object>)result;
             foreach (string propertyName in propertyNamesToList)
             {
                 sb.AppendFormat("{0} = {1}; ", propertyName, resultAsDictionary[propertyName]);
