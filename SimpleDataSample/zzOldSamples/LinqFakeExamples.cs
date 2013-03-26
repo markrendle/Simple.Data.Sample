@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Simple.Data;
 
 namespace SimpleDataSample.Samples
 {
-    class LinqFakeExamples
+    internal class LinqFakeExamples
     {
         public static void FakeLinqOperatorsExample()
         {
-            var db = Database.Open();
-            var customers = db.Customers.All();
+            dynamic db = Database.Open();
+            dynamic customers = db.Customers.All();
 
-            var firstCustomer = customers.First();
-            var firstCustomerOrNull = customers.FirstOrDefault();
+            dynamic firstCustomer = customers.First();
+            dynamic firstCustomerOrNull = customers.FirstOrDefault();
 
             List<dynamic> customerList = customers.ToList();
             dynamic[] customerArray = customers.ToArray();
@@ -22,8 +20,8 @@ namespace SimpleDataSample.Samples
 
         public static void FakeLinqOperatorsWithTypesExample()
         {
-            var db = Database.Open();
-            var customers = db.Customers.All();
+            dynamic db = Database.Open();
+            dynamic customers = db.Customers.All();
 
             Customer firstCustomer = customers.First();
             Customer firstCustomerOrNull = customers.FirstOrDefault();
@@ -34,7 +32,7 @@ namespace SimpleDataSample.Samples
 
         public static void FakeLinqOperatorsCastExample()
         {
-            var db = Database.Open();
+            dynamic db = Database.Open();
             foreach (Customer customer in db.Customers.All().Cast<Customer>())
             {
                 Console.WriteLine(customer.Name);
