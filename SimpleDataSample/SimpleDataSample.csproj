@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="2_Basics\AllMethodSamples.cs" />
     <Compile Include="2_Basics\ColumnSelectionSamples.cs" />
+    <Compile Include="2_Basics\ExistsByMethodSamples.cs" />
     <Compile Include="2_Basics\ExistsMethodSamples.cs" />
     <Compile Include="2_Basics\LazyVsEagerLoadingDemo.cs" />
     <Compile Include="2_Basics\LeftJoinSamples.cs" />
