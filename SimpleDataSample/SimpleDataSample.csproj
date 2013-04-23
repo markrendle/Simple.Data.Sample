@@ -54,6 +54,8 @@
   <ItemGroup>
     <Compile Include="2_Basics\AllMethodSamples.cs" />
     <Compile Include="2_Basics\ColumnSelectionSamples.cs" />
+    <Compile Include="2_Basics\HavingMethodSamples.cs" />
+    <Compile Include="2_Basics\WithMethodSamples.cs" />
     <Compile Include="2_Basics\ThenByMethodSamples.cs" />
     <Compile Include="2_Basics\OrderByDescendingMethodSamples.cs" />
     <Compile Include="2_Basics\OrderByMethodSamples.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="2_Basics\FindMethodSamples.cs" />
     <Compile Include="2_Basics\GetMethodSamples.cs" />
     <Compile Include="2_Basics\FindAllByMethodSamples.cs" />
+    <Compile Include="WithRunner.cs" />
     <Compile Include="JoinRunner.cs" />
     <Compile Include="ExampleRunner.cs" />
     <Compile Include="1_GettingStarted\OpenDatabaseSamples.cs" />
