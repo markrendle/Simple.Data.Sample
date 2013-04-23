@@ -117,6 +117,28 @@ namespace SimpleDataSample
                         var existsByDemo = new ExistsByMethodSamples();
                         existsByDemo.RunAll();
                         break;
+                    case "o":
+                    case "O":
+                        var orderByDemo = new OrderByMethodSamples();
+                        orderByDemo.RunAll();
+                        var orderByDescDemo = new OrderByDescendingMethodSamples();
+                        orderByDescDemo.RunAll();
+                        break;
+                    case "p":
+                    case "P":
+                        var thenByDemo = new ThenByMethodSamples();
+                        thenByDemo.RunAll();
+                        break;
+                    case "q":
+                    case "Q":
+                        var withDemo = new WithMethodSamples();
+                        withDemo.RunAll();
+                        break;
+                    case "r":
+                    case "R":
+                        var havingDemo = new HavingMethodSamples();
+                        havingDemo.RunAll();
+                        break;
                     case "x":
                     case "X":
                         Console.WriteLine("Fin");
@@ -159,6 +181,10 @@ namespace SimpleDataSample
             Console.WriteLine("L. Lazy vs Eager Loading Demos");
             Console.WriteLine("M. Any \\ Exists Demos");
             Console.WriteLine("N. AnyBy \\ ExistsBy Demos");
+            Console.WriteLine("O. OrderBy(Descending) Demos");
+            Console.WriteLine("P. ThenBy(Descending) Demos");
+            Console.WriteLine("Q. With Demos");
+            Console.WriteLine("R. Having Demos");
             Console.WriteLine("X. Quit");
             Console.WriteLine();
         }
