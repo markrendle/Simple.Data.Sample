@@ -139,6 +139,11 @@ namespace SimpleDataSample
                         var havingDemo = new HavingMethodSamples();
                         havingDemo.RunAll();
                         break;
+                    case "s":
+                    case "S":
+                        var lenDemo = new LengthMethodSamples();
+                        lenDemo.RunAll();
+                        break;
                     case "x":
                     case "X":
                         Console.WriteLine("Fin");
@@ -185,6 +190,7 @@ namespace SimpleDataSample
             Console.WriteLine("P. ThenBy(Descending) Demos");
             Console.WriteLine("Q. With Demos");
             Console.WriteLine("R. Having Demos");
+            Console.WriteLine("S. Misc Methods - Len, First, Single, Skip, Take");
             Console.WriteLine("X. Quit");
             Console.WriteLine();
         }
