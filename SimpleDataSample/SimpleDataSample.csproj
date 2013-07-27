@@ -54,6 +54,8 @@
   <ItemGroup>
     <Compile Include="2_Basics\AllMethodSamples.cs" />
     <Compile Include="2_Basics\ColumnSelectionSamples.cs" />
+    <Compile Include="2_Basics\SingleOrDefaultMethodSamples.cs" />
+    <Compile Include="2_Basics\FirstOrDefaultMethodSamples.cs" />
     <Compile Include="2_Basics\LengthMethodSamples.cs" />
     <Compile Include="2_Basics\HavingMethodSamples.cs" />
     <Compile Include="2_Basics\WithMethodSamples.cs" />

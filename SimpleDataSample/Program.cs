@@ -9,7 +9,7 @@ namespace SimpleDataSample
             do
             {
                 ShowOptions();
-                switch (Console.ReadLine())
+                switch (Console.ReadLine().ToLower())
                 {
                     case "1":
                         var openDbDemo = new OpenDatabaseSamples();
@@ -48,104 +48,88 @@ namespace SimpleDataSample
                         basicWhereDemo.RunAll();
                         break;
                     case "a":
-                    case "A":
                         var commonSearchesDemo = new WhereConditionSamples();
                         commonSearchesDemo.RunAll();
                         break;
                     case "b":
-                    case "B":
                         var countDistinctDemo = new CountDistinctSamples();
                         countDistinctDemo.RunAll();
                         break;
                     case "c":
-                    case "C":
                         var getCountDemo = new GetCountMethodSamples();
                         getCountDemo.RunAll();
                         break;
                     case "d":
-                    case "D":
                         var getCountByDemo = new GetCountByMethodSamples();
                         getCountByDemo.RunAll();
                         break;
                     case "e":
-                    case "E":
                         var pocoDemo = new PocoMethodSamples();
                         pocoDemo.RunAll();
                         break;
                     case "f":
-                    case "F":
                         var scalarDemo = new ToScalarSamples();
                         scalarDemo.RunAll();
                         break;
                     case "g":
-                    case "G":
                         var scalarCollectionDemo = new ToScalarCollectionSamples();
                         scalarCollectionDemo.RunAll();
                         break;
                     case "h":
-                    case "H":
                         var naturalJoinDemo = new NaturalJoinSamples();
                         naturalJoinDemo.RunAll();
                         break;
                     case "i":
-                    case "I":
                         var explicitJoinDemo = new ExplicitJoinSamples();
                         explicitJoinDemo.RunAll();
                         break;
                     case "j":
-                    case "J":
                         var outerJoinDemo = new OuterJoinSamples();
                         outerJoinDemo.RunAll();
                         break;
                     case "k":
-                    case "K":
                         var leftJoinDemo = new LeftJoinSamples();
                         leftJoinDemo.RunAll();
                         break;
                     case "l":
-                    case "L":
                         var lazyEagerDemo = new LazyVsEagerLoadingSamples();
                         lazyEagerDemo.RunAll();
                         break;
                     case "m":
-                    case "M":
                         var existsDemo = new ExistsMethodSamples();
                         existsDemo.RunAll();
                         break;
                     case "n":
-                    case "N":
                         var existsByDemo = new ExistsByMethodSamples();
                         existsByDemo.RunAll();
                         break;
                     case "o":
-                    case "O":
                         var orderByDemo = new OrderByMethodSamples();
                         orderByDemo.RunAll();
                         var orderByDescDemo = new OrderByDescendingMethodSamples();
                         orderByDescDemo.RunAll();
                         break;
                     case "p":
-                    case "P":
                         var thenByDemo = new ThenByMethodSamples();
                         thenByDemo.RunAll();
                         break;
                     case "q":
-                    case "Q":
                         var withDemo = new WithMethodSamples();
                         withDemo.RunAll();
                         break;
                     case "r":
-                    case "R":
                         var havingDemo = new HavingMethodSamples();
                         havingDemo.RunAll();
                         break;
                     case "s":
-                    case "S":
-                        var lenDemo = new LengthMethodSamples();
-                        lenDemo.RunAll();
+                        //var lenDemo = new LengthMethodSamples();
+                        //lenDemo.RunAll();
+                        var firstDemo = new FirstMethodSamples();
+                        firstDemo.RunAll();
+                        //var firstOrDefDemo = new FirstOrDefaultMethodSamples();
+                        //firstOrDefDemo.RunAll();
                         break;
                     case "x":
-                    case "X":
                         Console.WriteLine("Fin");
                         return;
                     default:
