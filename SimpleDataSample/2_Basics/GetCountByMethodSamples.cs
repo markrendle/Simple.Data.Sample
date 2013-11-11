@@ -26,12 +26,12 @@
                 "Albums.GetCountBy(GenreId: null).",
                 db => db.Albums.GetCountBy(GenreId: null));
 
-            // Throws System.FormatException. Expected BadExpressionException
+            // Throws System.FormatException. 
             ExampleRunner.RunQuery(
                 "Albums.GetCountByGenreId(\"a\"). Malformed Simple Expression. Throws System.FormatException",
                 db => db.Albums.GetCountByGenreId("a"));
 
-            // Throws System.FormatException. Expected BadExpressionException
+            // Throws System.FormatException. 
             ExampleRunner.RunQuery(
                 "Albums.GetCountBy(GenreId:\"a\"). Malformed Simple Expression. Throws System.FormatException",
                 db => db.Albums.GetCountBy(GenreId: "a"));
@@ -42,7 +42,7 @@
                 "Albums.GetCountByGenreId(1)",
                 db => db.Albums.GetCountByGenreId(1));
 
-            // Throws System.ArgumentException.  No columns specified. Expeceted to run
+            // Throws System.ArgumentException.  No columns specified. Expected to run
             ExampleRunner.RunQuery(
                 "Albums.GetCountBy(GenreId :1)",
                 db => db.Albums.GetCountBy(GenreId: 1));
