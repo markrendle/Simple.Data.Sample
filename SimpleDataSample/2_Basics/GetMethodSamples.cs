@@ -13,7 +13,7 @@
                 db => db.Albums.Get("AlbumId"));
 
             ExampleRunner.RunQuery(
-                "Run Get(1). AlbumId does not exist. Returns null",
+                "Run Get(1000). AlbumId does not exist. Returns null",
                 db => db.Albums.Get(1000));
 
             ExampleRunner.RunQuery(
