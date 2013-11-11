@@ -254,7 +254,7 @@ namespace SimpleDataSample
             #endregion
         }
 
-        private static dynamic TwoTableLeftJoinWithAliasUsingExpressions(dynamic db)
+        private dynamic TwoTableLeftJoinWithAliasUsingExpressions(dynamic db)
         {
             dynamic genreAlias;
             return db.Albums.FindAllByGenreId(1)
@@ -265,7 +265,7 @@ namespace SimpleDataSample
                 ;
         }
 
-        private static dynamic TwoTableLeftJoinWithAliasUsingNamedParameters(dynamic db)
+        private dynamic TwoTableLeftJoinWithAliasUsingNamedParameters(dynamic db)
         {
             dynamic genreAlias;
             return db.Albums.FindAllByGenreId(1)
