@@ -149,7 +149,7 @@ namespace SimpleDataSample
             Console.WriteLine();
             Console.WriteLine("1. Open Database Demos");
             Console.WriteLine("2. Basic Selection with All()");
-            Console.WriteLine("3. Basic Selection with FindBy()");
+            Console.WriteLine("3. Basic Selection with FindBy() <-- Deprecated in Simple.Data v1");
             Console.WriteLine("4. Basic Selection with FindAllBy()");
             Console.WriteLine("5. Basic Selection with Get()");
             Console.WriteLine("6. Basic Selection with Find()");
